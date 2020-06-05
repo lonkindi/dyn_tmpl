@@ -17,7 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from task1.views import inflation_view
+from task2.views import home_view, about_view, contacts_view, examples_view
 
 urlpatterns = [
-    path('task1', inflation_view, name='task1'),
+    path('task1/', inflation_view, name='task1'),
+    path('task2/', home_view, name='task2'),
+    path('task2/about/', about_view, name='about'),
+    path('task2/contacts/', contacts_view, name='contacts'),
+    path('task2/examples/', examples_view, name='examples'),
+    path('admin/', admin.site.urls),
 ]
